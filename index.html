@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste de Contrôle - Salle Mécanique P.G.R.</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1, h2 { color: #2c3e50; }
+    label { display: block; margin: 10px 0 5px; }
+    input[type="checkbox"] { margin-right: 10px; }
+    textarea { width: 100%; height: 80px; }
+    .section { margin-bottom: 30px; }
+    .icon-link {
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .icon-link img {
+      width: 32px;
+      height: 32px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <h1>🛠️ Liste de Contrôle - Inspection de la Salle Mécanique</h1>
+
+  <form action="mailto:epowers@ville.levis.qc.ca" method="post" enctype="text/plain">
+    <label>Nom du bâtiment : <input type="text" name="batiment"></label>
+    <label>Emplacement : <input type="text" name="emplacement"></label>
+    <label>Date : <input type="date" name="date"></label>
+    <label>Nom de l'inspecteur : <input type="text" name="inspecteur"></label>
+
+    <div class="section">
+      <h2>1. État Général</h2>
+      <label><input type="checkbox" name="etat_general"> Salle propre et sans débris</label>
+      <label><input type="checkbox" name="etat_general"> Éclairage adéquat et fonctionnel</label>
+      <label><input type="checkbox" name="etat_general"> Signalisation visible (arrêt d'urgence, avertissements)</label>
+      <label><input type="checkbox" name="etat_general"> Accès dégagé à tous les équipements</label>
+      <label><input type="checkbox" name="etat_general"> Pas de fuites d'eau ou d'eau stagnante</label>
+      <label><input type="checkbox" name="etat_general"> Drains de sol dégagés</label>
+      <label><input type="checkbox" name="etat_general"> Extincteur présent et fonctionnel</label>
+      <label><input type="checkbox" name="etat_general"> Sorties d'urgence dégagées</label>
+    </div>
+
+    <div class="section">
+      <h2>2. Systèmes CVCA</h2>
+      <label><input type="checkbox" name="cvca"> Ventilateurs fonctionnels, sans vibrations</label>
+      <label><input type="checkbox" name="cvca"> Courroies et poulies en bon état</label>
+      <label><input type="checkbox" name="cvca"> Filtres propres et bien installés</label>
+      <label><input type="checkbox" name="cvca"> Thermostats calibrés</label>
+      <label><input type="checkbox" name="cvca"> Registres et actionneurs fonctionnels</label>
+      <label><input type="checkbox" name="cvca"> Niveaux de bruit/vibrations normaux</label>
+    </div>
+
+    <div class="section">
+      <h2>3. Chaudières et Chauffe-eau</h2>
+      <label><input type="checkbox" name="chaudieres"> Pression/température normales</label>
+      <label><input type="checkbox" name="chaudieres"> Pas de fuites, rouille ou corrosion</label>
+      <label><input type="checkbox" name="chaudieres"> Soupapes de sécurité fonctionnelles</label>
+      <label><input type="checkbox" name="chaudieres"> Flammes stables et de bonne couleur</label>
+      <label><input type="checkbox" name="chaudieres"> Connexions de carburant sécurisées</label>
+      <label><input type="checkbox" name="chaudieres"> Systèmes d'évacuation dégagés</label>
+    </div>
+
+    <div class="section">
+      <h2>4. Pompes et Moteurs</h2>
+      <label><input type="checkbox" name="pompes"> Pompes silencieuses et sans vibrations anormales</label>
+      <label><input type="checkbox" name="pompes"> Paliers/moteurs lubrifiés</label>
+      <label><input type="checkbox" name="pompes"> Alignement correct des accouplements/courroies</label>
+      <label><input type="checkbox" name="pompes"> Pas de fuites d'huile/liquide</label>
+      <label><input type="checkbox" name="pompes"> Connexions électriques sûres</label>
+    </div>
+
+    <div class="section">
+      <h2>5. Systèmes Électriques</h2>
+      <label><input type="checkbox" name="electriques"> Capots de panneaux en place et étiquetés</label>
+      <label><input type="checkbox" name="electriques"> Disjoncteurs en bon état</label>
+      <label><input type="checkbox" name="electriques"> Pas de fils exposés</label>
+      <label><input type="checkbox" name="electriques"> Conduits sécurisés</label>
+      <label><input type="checkbox" name="electriques"> Mise à la terre intacte</label>
+      <label><input type="checkbox" name="electriques"> Arrêts d'urgence bien indiqués</label>
+    </div>
+
+    <div class="section">
+      <h2>6. Commandes et Instruments</h2>
+      <label><input type="checkbox" name="commandes"> Système de gestion (GTB) communique correctement</label>
+      <label><input type="checkbox" name="commandes"> Capteurs calibrés</label>
+      <label><input type="checkbox" name="commandes"> Alarmes testées</label>
+      <label><input type="checkbox" name="commandes"> Vérification des séquences d'opérations</label>
+    </div>
+
+    <div class="section">
+      <h2>7. Tuyauterie et Vannes</h2>
+      <label><input type="checkbox" name="tuyauterie"> Aucune fuite visible</label>
+      <label><input type="checkbox" name="tuyauterie"> Isolation intacte</label>
+      <label><input type="checkbox" name="tuyauterie"> Vannes fonctionnelles et étiquetées</label>
+      <label><input type="checkbox" name="tuyauterie"> Manomètres et thermomètres précis</label>
+    </div>
+
+    <div class="section">
+      <h2>8. Ventilation et Qualité de l’Air</h2>
+      <label><input type="checkbox" name="ventilation"> Extracteurs en fonctionnement</label>
+      <label><input type="checkbox" name="ventilation"> Prises d'air non obstruées</label>
+      <label><input type="checkbox" name="ventilation"> Absence d’odeurs, moisissures</label>
+      <label><input type="checkbox" name="ventilation"> Détecteurs de CO testés</label>
+    </div>
+
+    <div class="section">
+      <h2>9. Sécurité et Conformité</h2>
+      <label><input type="checkbox" name="securite"> Dispositifs de consignation disponibles</label>
+      <label><input type="checkbox" name="securite"> Fiches de données de sécurité présentes</label>
+      <label><input type="checkbox" name="securite"> EPI disponible et en bon état</label>
+      <label><input type="checkbox" name="securite"> Conformité réglementaire vérifiée</label>
+    </div>
+
+    <div class="section">
+      <h2>10. Notes / Observations</h2>
+      <textarea name="observations"></textarea>
+    </div>
+
+    <label>Signature de l'inspecteur : <input type="text" name="signature"></label>
+    <label><input type="checkbox" name="suivi"> Suivi nécessaire</label>
+
+    <br><br>
+    <button type="submit">Envoyer le formulaire</button>
+  </form>
+
+  <div class="icon-link">
+    🔗 <a href="https://example.com/plan.jpg" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/69/69524.png" alt="Plan"> Voir le plan</a>
+  </div>
+</body>
+</html>
